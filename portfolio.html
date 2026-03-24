@@ -9,7 +9,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   :root {
     --charcoal: #2C2C2A;
     --warm-white: #F1EFE8;
@@ -18,9 +17,7 @@
     --light-gray: #D3D1C7;
     --bg: #F7F6F2;
   }
-
   html { scroll-behavior: smooth; }
-
   body {
     background: var(--bg);
     color: var(--charcoal);
@@ -29,8 +26,6 @@
     line-height: 1.6;
     overflow-x: hidden;
   }
-
-  /* NAV */
   nav {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -43,7 +38,6 @@
     backdrop-filter: blur(8px);
     border-bottom: 1px solid rgba(44,44,42,0.08);
   }
-
   .logo {
     font-family: 'DM Sans', sans-serif;
     font-weight: 500;
@@ -53,7 +47,6 @@
     text-decoration: none;
   }
   .logo span { color: var(--blue); }
-
   .nav-links {
     display: flex;
     gap: 2.5rem;
@@ -69,7 +62,6 @@
   }
   .nav-links a:hover { color: var(--charcoal); }
   .nav-links .active { color: var(--charcoal); font-weight: 500; }
-
   .nav-cta {
     font-family: 'DM Sans', sans-serif;
     font-size: 0.85rem;
@@ -82,19 +74,15 @@
     transition: background 0.2s, transform 0.15s;
   }
   .nav-cta:hover { background: #444441; transform: translateY(-1px); }
-
-  /* PAGE HEADER */
   .page-header {
     padding: 10rem 4rem 5rem;
     border-bottom: 1px solid rgba(44,44,42,0.1);
     position: relative;
     overflow: hidden;
   }
-
   .page-header-bg {
     position: absolute;
-    top: 50%;
-    right: -2rem;
+    top: 50%; right: -2rem;
     transform: translateY(-50%);
     font-family: 'Fraunces', serif;
     font-size: clamp(120px, 18vw, 240px);
@@ -105,7 +93,6 @@
     letter-spacing: -6px;
     white-space: nowrap;
   }
-
   .page-label {
     font-size: 0.75rem;
     letter-spacing: 2px;
@@ -115,38 +102,27 @@
     opacity: 0;
     animation: fadeUp 0.7s 0.1s forwards;
   }
-
   .page-header h1 {
     font-family: 'Fraunces', serif;
     font-size: clamp(2.5rem, 6vw, 5.5rem);
     font-weight: 300;
     letter-spacing: -2px;
     line-height: 1.05;
-    max-width: 700px;
+    max-width: 760px;
     opacity: 0;
     animation: fadeUp 0.7s 0.25s forwards;
   }
-
-  .page-header h1 em {
-    font-style: italic;
-    color: var(--blue);
-  }
-
+  .page-header h1 em { font-style: italic; color: var(--blue); }
   .page-header p {
     margin-top: 1.5rem;
     font-size: 1rem;
     color: var(--mid-gray);
-    max-width: 480px;
+    max-width: 560px;
     line-height: 1.7;
     opacity: 0;
     animation: fadeUp 0.7s 0.4s forwards;
   }
-
-  /* PORTFOLIO GRID */
-  .portfolio {
-    padding: 6rem 4rem;
-  }
-
+  .portfolio { padding: 6rem 4rem; }
   .project-card {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -157,22 +133,16 @@
     opacity: 0;
     animation: fadeUp 0.7s forwards;
   }
-
   .project-card:first-child { animation-delay: 0.1s; }
   .project-card:nth-child(2) { animation-delay: 0.25s; }
-
   .project-card.reverse { direction: rtl; }
   .project-card.reverse > * { direction: ltr; }
-
-  .project-info {}
-
   .project-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
     margin-bottom: 1.25rem;
   }
-
   .tag {
     font-size: 0.7rem;
     font-weight: 500;
@@ -183,20 +153,17 @@
     color: var(--mid-gray);
     border: 1px solid var(--light-gray);
   }
-
   .tag.mobile-soon {
     background: #E6F1FB;
     color: #185FA5;
     border-color: #B5D4F4;
   }
-
   .project-num {
     font-family: 'Fraunces', serif;
     font-size: 0.85rem;
     color: var(--light-gray);
     margin-bottom: 0.5rem;
   }
-
   .project-info h2 {
     font-family: 'Fraunces', serif;
     font-size: clamp(1.8rem, 3vw, 2.8rem);
@@ -205,15 +172,13 @@
     line-height: 1.1;
     margin-bottom: 1rem;
   }
-
   .project-info p {
     font-size: 0.95rem;
     color: var(--mid-gray);
     line-height: 1.75;
     margin-bottom: 1.5rem;
-    max-width: 420px;
+    max-width: 520px;
   }
-
   .project-meta {
     display: flex;
     flex-direction: column;
@@ -224,23 +189,20 @@
     border-radius: 12px;
     border: 1px solid var(--light-gray);
   }
-
   .meta-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 0.82rem;
+    gap: 1rem;
   }
-
   .meta-label { color: var(--mid-gray); }
-  .meta-value { color: var(--charcoal); font-weight: 500; }
-
+  .meta-value { color: var(--charcoal); font-weight: 500; text-align: right; }
   .project-actions {
     display: flex;
     gap: 0.75rem;
     flex-wrap: wrap;
   }
-
   .btn-visit {
     background: var(--charcoal);
     color: var(--warm-white);
@@ -256,7 +218,6 @@
     gap: 6px;
   }
   .btn-visit:hover { background: #444441; transform: translateY(-2px); }
-
   .btn-mobile {
     color: var(--blue);
     padding: 0.7rem 1.5rem;
@@ -273,19 +234,13 @@
     transition: transform 0.15s, border-color 0.2s;
     cursor: default;
   }
-
-  /* PROJECT VISUAL */
-  .project-visual {
-    position: relative;
-  }
-
+  .project-visual { position: relative; }
   .browser-frame {
     background: var(--charcoal);
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 24px 64px rgba(44,44,42,0.12);
   }
-
   .browser-bar {
     background: #3a3a38;
     padding: 10px 16px;
@@ -293,20 +248,11 @@
     align-items: center;
     gap: 10px;
   }
-
-  .browser-dots {
-    display: flex;
-    gap: 5px;
-  }
-
+  .browser-dots { display: flex; gap: 5px; }
   .browser-dots span {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.15);
-    display: block;
+    width: 8px; height: 8px; border-radius: 50%;
+    background: rgba(255,255,255,0.15); display: block;
   }
-
   .browser-url {
     flex: 1;
     background: rgba(255,255,255,0.06);
@@ -317,7 +263,6 @@
     font-family: 'DM Sans', sans-serif;
     margin-left: 6px;
   }
-
   .browser-content {
     padding: 2rem;
     min-height: 260px;
@@ -326,55 +271,31 @@
     justify-content: center;
     position: relative;
   }
-
-  /* WE-SWIM visual */
-  .swim-visual {
-    background: linear-gradient(160deg, #0a2744 0%, #0d3a6b 50%, #1a5c9e 100%);
-  }
-
-  .swim-header {
+  .swim-visual { background: linear-gradient(160deg, #0a2744 0%, #0d3a6b 50%, #1a5c9e 100%); }
+  .swim-header, .verb-header {
     display: flex;
     align-items: center;
     gap: 10px;
     margin-bottom: 1.5rem;
   }
-
   .swim-icon {
-    width: 32px;
-    height: 32px;
-    background: rgba(255,255,255,0.1);
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 32px; height: 32px; background: rgba(255,255,255,0.1);
+    border-radius: 8px; display: flex; align-items: center; justify-content: center;
   }
-
-  .swim-title {
+  .swim-title, .verb-title {
     font-family: 'DM Sans', sans-serif;
     font-size: 0.95rem;
     font-weight: 500;
     color: white;
   }
-
-  .swim-subtitle {
-    font-size: 0.7rem;
-    color: rgba(255,255,255,0.45);
-  }
-
-  .swim-date {
-    font-size: 0.7rem;
-    color: rgba(255,255,255,0.4);
-    margin-bottom: 1rem;
-    letter-spacing: 0.5px;
-  }
-
+  .swim-subtitle, .verb-subtitle { font-size: 0.7rem; color: rgba(255,255,255,0.45); }
+  .swim-date { font-size: 0.7rem; color: rgba(255,255,255,0.4); margin-bottom: 1rem; letter-spacing: 0.5px; }
   .swim-conditions {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 8px;
     margin-bottom: 1rem;
   }
-
   .condition-card {
     background: rgba(255,255,255,0.07);
     border: 1px solid rgba(255,255,255,0.1);
@@ -382,239 +303,87 @@
     padding: 10px;
     text-align: center;
   }
-
-  .condition-icon {
-    font-size: 18px;
-    margin-bottom: 4px;
-    display: block;
-  }
-
-  .condition-val {
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: white;
-    font-family: 'DM Sans', sans-serif;
-  }
-
-  .condition-label {
-    font-size: 0.62rem;
-    color: rgba(255,255,255,0.4);
-    display: block;
-    margin-top: 2px;
-  }
-
+  .condition-icon { font-size: 18px; margin-bottom: 4px; display: block; }
+  .condition-val { font-size: 0.9rem; font-weight: 500; color: white; font-family: 'DM Sans', sans-serif; }
+  .condition-label { font-size: 0.62rem; color: rgba(255,255,255,0.4); display: block; margin-top: 2px; }
   .swim-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
+    display: inline-flex; align-items: center; gap: 6px;
     background: rgba(52, 199, 89, 0.2);
     border: 1px solid rgba(52, 199, 89, 0.35);
-    border-radius: 100px;
-    padding: 5px 12px;
-    font-size: 0.72rem;
-    color: #4cd964;
-    font-family: 'DM Sans', sans-serif;
+    border-radius: 100px; padding: 5px 12px; font-size: 0.72rem;
+    color: #4cd964; font-family: 'DM Sans', sans-serif;
   }
-
-  .swim-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: #4cd964;
-    animation: pulse 2s infinite;
-  }
-
-  /* VERBHERO visual */
-  .verb-visual {
-    background: linear-gradient(160deg, #1a0a3d 0%, #2d1566 50%, #3d1f8a 100%);
-  }
-
-  .verb-header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 1.5rem;
-  }
-
+  .swim-dot { width: 6px; height: 6px; border-radius: 50%; background: #4cd964; animation: pulse 2s infinite; }
+  .verb-visual { background: linear-gradient(160deg, #1a0a3d 0%, #2d1566 50%, #3d1f8a 100%); }
   .verb-logo {
-    width: 32px;
-    height: 32px;
-    background: #7c3aed;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Fraunces', serif;
-    font-size: 14px;
-    color: white;
+    width: 32px; height: 32px; background: #7c3aed; border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Fraunces', serif; font-size: 14px; color: white;
   }
-
-  .verb-title {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.95rem;
-    font-weight: 500;
-    color: white;
-  }
-
-  .verb-subtitle {
-    font-size: 0.7rem;
-    color: rgba(255,255,255,0.45);
-  }
-
   .verb-score {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1.25rem;
+    display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;
   }
-
   .score-pill {
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.12);
-    border-radius: 100px;
-    padding: 4px 12px;
-    font-size: 0.72rem;
-    color: rgba(255,255,255,0.6);
-    font-family: 'DM Sans', sans-serif;
+    background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 100px; padding: 4px 12px; font-size: 0.72rem;
+    color: rgba(255,255,255,0.6); font-family: 'DM Sans', sans-serif;
   }
-
-  .score-val {
-    font-family: 'Fraunces', serif;
-    font-size: 1.4rem;
-    color: #a78bfa;
-  }
-
+  .score-val { font-family: 'Fraunces', serif; font-size: 1.4rem; color: #a78bfa; }
   .verb-card {
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 12px;
-    padding: 1.25rem;
-    text-align: center;
-    margin-bottom: 0.75rem;
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px; padding: 1.25rem; text-align: center; margin-bottom: 0.75rem;
   }
-
-  .verb-prompt {
-    font-size: 0.7rem;
-    color: rgba(255,255,255,0.4);
-    margin-bottom: 0.4rem;
-  }
-
-  .verb-word {
-    font-family: 'Fraunces', serif;
-    font-size: 1.6rem;
-    color: white;
-    font-style: italic;
-  }
-
+  .verb-prompt { font-size: 0.7rem; color: rgba(255,255,255,0.4); margin-bottom: 0.4rem; }
+  .verb-word { font-family: 'Fraunces', serif; font-size: 1.6rem; color: white; font-style: italic; }
   .verb-options {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 6px;
   }
-
   .verb-option {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 8px;
-    padding: 7px 10px;
-    font-size: 0.8rem;
-    color: rgba(255,255,255,0.7);
-    font-family: 'DM Sans', sans-serif;
-    text-align: center;
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px; padding: 7px 10px; font-size: 0.8rem;
+    color: rgba(255,255,255,0.7); font-family: 'DM Sans', sans-serif; text-align: center;
   }
-
   .verb-option.correct {
-    background: rgba(52, 199, 89, 0.15);
-    border-color: rgba(52, 199, 89, 0.35);
-    color: #4cd964;
+    background: rgba(52, 199, 89, 0.15); border-color: rgba(52, 199, 89, 0.35); color: #4cd964;
   }
-
-  /* MOBILE BADGE */
   .mobile-badge {
-    position: absolute;
-    top: -12px;
-    right: -12px;
-    background: var(--blue);
-    color: white;
-    font-size: 0.68rem;
-    font-weight: 500;
-    padding: 5px 12px;
-    border-radius: 100px;
-    font-family: 'DM Sans', sans-serif;
-    white-space: nowrap;
-    box-shadow: 0 4px 12px rgba(55,138,221,0.35);
+    position: absolute; top: -12px; right: -12px; background: var(--blue); color: white;
+    font-size: 0.68rem; font-weight: 500; padding: 5px 12px; border-radius: 100px;
+    font-family: 'DM Sans', sans-serif; white-space: nowrap; box-shadow: 0 4px 12px rgba(55,138,221,0.35);
   }
-
-  /* CTA */
   .portfolio-cta {
-    padding: 6rem 4rem;
-    text-align: center;
-    border-top: 1px solid rgba(44,44,42,0.1);
+    padding: 6rem 4rem; text-align: center; border-top: 1px solid rgba(44,44,42,0.1);
   }
-
   .portfolio-cta p {
-    font-size: 0.75rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--mid-gray);
-    margin-bottom: 1rem;
+    font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; color: var(--mid-gray); margin-bottom: 1rem;
   }
-
   .portfolio-cta h2 {
-    font-family: 'Fraunces', serif;
-    font-size: clamp(2rem, 4vw, 3.5rem);
-    font-weight: 300;
-    letter-spacing: -1.5px;
-    margin-bottom: 1rem;
+    font-family: 'Fraunces', serif; font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 300;
+    letter-spacing: -1.5px; margin-bottom: 1rem;
   }
-
   .portfolio-cta h2 em { font-style: italic; color: var(--blue); }
-
-  .portfolio-cta span {
-    display: block;
-    font-size: 0.95rem;
-    color: var(--mid-gray);
-    margin-bottom: 2rem;
-  }
-
+  .portfolio-cta span { display: block; font-size: 0.95rem; color: var(--mid-gray); margin-bottom: 2rem; }
   .btn-primary {
-    background: var(--charcoal);
-    color: var(--warm-white);
-    padding: 0.85rem 2rem;
-    border-radius: 100px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.9rem;
-    font-weight: 400;
-    text-decoration: none;
+    background: var(--charcoal); color: var(--warm-white); padding: 0.85rem 2rem; border-radius: 100px;
+    font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 400; text-decoration: none;
     transition: transform 0.15s, background 0.2s;
   }
   .btn-primary:hover { background: #444441; transform: translateY(-2px); }
-
-  /* FOOTER */
   footer {
-    padding: 2.5rem 4rem;
-    border-top: 1px solid rgba(44,44,42,0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 2.5rem 4rem; border-top: 1px solid rgba(44,44,42,0.1);
+    display: flex; justify-content: space-between; align-items: center;
   }
-
   footer p { font-size: 0.8rem; color: var(--mid-gray); }
   footer a { font-size: 0.8rem; color: var(--mid-gray); text-decoration: none; transition: color 0.2s; }
   footer a:hover { color: var(--charcoal); }
-
-  /* ANIMATIONS */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
   }
-
   @keyframes pulse {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.4; }
   }
-
-  /* RESPONSIVE */
   @media (max-width: 900px) {
     nav { padding: 1.25rem 2rem; }
     .nav-links { display: flex; }
@@ -629,7 +398,6 @@
 </style>
 </head>
 <body>
-
 <nav>
   <a href="index.html" class="logo">El<span>Niro</span></a>
   <ul class="nav-links">
@@ -639,19 +407,13 @@
     <li><a href="mailto:nir.etzion.ai@gmail.com" class="nav-cta">Get in touch</a></li>
   </ul>
 </nav>
-
-<!-- PAGE HEADER -->
 <div class="page-header">
   <div class="page-header-bg">Work</div>
-  <p class="page-label">Our work</p>
-  <h1>Apps built for<br><em>real problems</em></h1>
-  <p>Two live products in the wild — with iOS and Android versions on the way for both.</p>
+  <p class="page-label">Selected work</p>
+  <h1>Products built around<br><em>real use cases</em></h1>
+  <p>Two live products that show how we turn specific problems into clear, usable software people can understand and return to.</p>
 </div>
-
-<!-- PORTFOLIO -->
 <section class="portfolio">
-
-  <!-- WE-SWIM -->
   <div class="project-card">
     <div class="project-info">
       <p class="project-num">01</p>
@@ -662,24 +424,23 @@
         <span class="tag mobile-soon">📱 Mobile coming soon</span>
       </div>
       <h2>We-Swim</h2>
-      <p>Real-time sea conditions forecast for swimmers along Israel's Mediterranean coast. Tracks wave height, wind, temperature, and UV — so you always know if it's a good day to swim before you leave home. Built to be customized for any sea or coastline.</p>
+      <p>A sea-conditions app built for swimmers who need a fast, reliable decision before heading out. It brings wave height, wind, water temperature, and UV into one clear view, turning scattered forecast data into a simple go-or-wait check. The same concept can be adapted for other coastlines and outdoor conditions products.</p>
       <div class="project-meta">
         <div class="meta-row">
-          <span class="meta-label">Platform</span>
-          <span class="meta-value">Web (iOS & Android coming soon)</span>
+          <span class="meta-label">Problem solved</span>
+          <span class="meta-value">Checking multiple sources before a swim</span>
         </div>
         <div class="meta-row">
           <span class="meta-label">Audience</span>
-          <span class="meta-value">Open water swimmers</span>
+          <span class="meta-value">Open-water swimmers</span>
         </div>
         <div class="meta-row">
-          <span class="meta-label">Customizable for</span>
-          <span class="meta-value">Any sea or coastline</span>
+          <span class="meta-label">Can be adapted for</span>
+          <span class="meta-value">Other coasts and outdoor forecast use cases</span>
         </div>
       </div>
       <div class="project-actions">
-        <a href="https://sea-swimming.onrender.com/" target="_blank" class="btn-visit">
-          Visit app
+        <a href="https://sea-swimming.onrender.com/" target="_blank" class="btn-visit">Visit app
           <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.5 9.5l7-7M4 2.5h5.5V8"/></svg>
         </a>
         <span class="btn-mobile">
@@ -688,7 +449,6 @@
         </span>
       </div>
     </div>
-
     <div class="project-visual">
       <div class="mobile-badge">Live now</div>
       <div class="browser-frame">
@@ -712,32 +472,15 @@
           </div>
           <div class="swim-date">Today — Tel Aviv Beach</div>
           <div class="swim-conditions">
-            <div class="condition-card">
-              <span class="condition-icon">🌊</span>
-              <span class="condition-val">0.4m</span>
-              <span class="condition-label">Waves</span>
-            </div>
-            <div class="condition-card">
-              <span class="condition-icon">💨</span>
-              <span class="condition-val">12 kn</span>
-              <span class="condition-label">Wind</span>
-            </div>
-            <div class="condition-card">
-              <span class="condition-icon">🌡️</span>
-              <span class="condition-val">22°C</span>
-              <span class="condition-label">Sea temp</span>
-            </div>
+            <div class="condition-card"><span class="condition-icon">🌊</span><span class="condition-val">0.4m</span><span class="condition-label">Waves</span></div>
+            <div class="condition-card"><span class="condition-icon">💨</span><span class="condition-val">12 kn</span><span class="condition-label">Wind</span></div>
+            <div class="condition-card"><span class="condition-icon">🌡️</span><span class="condition-val">22°C</span><span class="condition-label">Sea temp</span></div>
           </div>
-          <div class="swim-badge">
-            <div class="swim-dot"></div>
-            Great conditions for swimming
-          </div>
+          <div class="swim-badge"><div class="swim-dot"></div>Great conditions for swimming</div>
         </div>
       </div>
     </div>
   </div>
-
-  <!-- VERBHERO -->
   <div class="project-card reverse">
     <div class="project-info">
       <p class="project-num">02</p>
@@ -748,24 +491,23 @@
         <span class="tag mobile-soon">📱 Mobile coming soon</span>
       </div>
       <h2>VerbHero</h2>
-      <p>A fun, game-based English learning app for Hebrew-speaking kids. Players master irregular verbs and their past tenses through fast-paced challenges — turning what's usually a chore into something kids actually want to play.</p>
+      <p>A game-based English learning product designed to make verb practice feel engaging instead of repetitive. It turns a narrow learning challenge — irregular verbs and past tense — into short, fast rounds that kids can actually enjoy and return to, making practice easier for both learners and parents.</p>
       <div class="project-meta">
         <div class="meta-row">
-          <span class="meta-label">Platform</span>
-          <span class="meta-value">Web (iOS & Android coming soon)</span>
+          <span class="meta-label">Problem solved</span>
+          <span class="meta-value">Low engagement with repetitive verb drills</span>
         </div>
         <div class="meta-row">
           <span class="meta-label">Audience</span>
-          <span class="meta-value">Hebrew-speaking kids</span>
+          <span class="meta-value">Hebrew-speaking kids learning English</span>
         </div>
         <div class="meta-row">
-          <span class="meta-label">Focus</span>
-          <span class="meta-value">English verbs & past tense</span>
+          <span class="meta-label">Product focus</span>
+          <span class="meta-value">Irregular verbs and past tense</span>
         </div>
       </div>
       <div class="project-actions">
-        <a href="https://learn-english-5540.onrender.com/" target="_blank" class="btn-visit">
-          Visit app
+        <a href="https://learn-english-5540.onrender.com/" target="_blank" class="btn-visit">Visit app
           <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.5 9.5l7-7M4 2.5h5.5V8"/></svg>
         </a>
         <span class="btn-mobile">
@@ -774,7 +516,6 @@
         </span>
       </div>
     </div>
-
     <div class="project-visual">
       <div class="mobile-badge">Live now</div>
       <div class="browser-frame">
@@ -809,13 +550,17 @@
       </div>
     </div>
   </div>
-
 </section>
-
-<!-- CTA -->
 <div class="portfolio-cta">
   <p>Have a project in mind?</p>
-  <h2>Let's build your<br><em>next app together</em></h2>
-  <span>Tell us what you need — we'll take it from idea to launch.</span>
+  <h2>Let’s shape your<br><em>next product clearly</em></h2>
+  <span>Tell us what you’re building, improving, or validating — we can help turn it into a clear, usable product.</span>
   <br>
-  <a href="mailto:nir.etzion.ai@gmail.com" class="btn-primary">Start a con
+  <a href="mailto:nir.etzion.ai@gmail.com" class="btn-primary">Start a conversation</a>
+</div>
+<footer>
+  <p>© ElNiro</p>
+  <a href="index.html">Back to home</a>
+</footer>
+</body>
+</html>
