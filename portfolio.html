@@ -136,6 +136,7 @@
   }
   .project-card:first-child { animation-delay: 0.1s; }
   .project-card:nth-child(2) { animation-delay: 0.25s; }
+  .project-card:nth-child(3) { animation-delay: 0.4s; }
   .project-card.reverse { direction: rtl; }
   .project-card.reverse > * { direction: ltr; }
   .project-tags {
@@ -347,6 +348,52 @@
   .verb-option.correct {
     background: rgba(52, 199, 89, 0.15); border-color: rgba(52, 199, 89, 0.35); color: #4cd964;
   }
+  .roof-visual { background: linear-gradient(160deg, #1f1a14 0%, #3a2c1e 50%, #5a3f26 100%); }
+  .roof-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1.25rem;
+  }
+  .roof-logo {
+    width: 32px; height: 32px; background: #c2410c; border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .roof-title {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: white;
+  }
+  .roof-subtitle { font-size: 0.7rem; color: rgba(255,255,255,0.45); }
+  .roof-body {
+    display: grid; grid-template-columns: 1fr 1.2fr; gap: 10px;
+  }
+  .roof-plan {
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px; padding: 8px; display: flex; align-items: center; justify-content: center;
+  }
+  .roof-findings { display: flex; flex-direction: column; gap: 6px; }
+  .roof-finding {
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px; padding: 7px 10px; display: flex; align-items: center; gap: 8px;
+  }
+  .finding-num {
+    width: 18px; height: 18px; border-radius: 50%; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.62rem; font-weight: 500; color: white; font-family: 'DM Sans', sans-serif;
+  }
+  .finding-num.urgent { background: #dc2626; }
+  .finding-num.soon { background: #d97706; }
+  .finding-num.monitor { background: #16a34a; }
+  .finding-text { font-size: 0.72rem; color: rgba(255,255,255,0.75); font-family: 'DM Sans', sans-serif; line-height: 1.3; }
+  .finding-text small { display: block; font-size: 0.6rem; color: rgba(255,255,255,0.4); }
+  .roof-export {
+    margin-top: 10px; display: inline-flex; align-items: center; gap: 6px; align-self: flex-start;
+    background: rgba(251, 146, 60, 0.15); border: 1px solid rgba(251, 146, 60, 0.35);
+    border-radius: 100px; padding: 5px 12px; font-size: 0.72rem;
+    color: #fb923c; font-family: 'DM Sans', sans-serif;
+  }
   .mobile-badge {
     position: absolute; top: -12px; right: -12px; background: var(--blue); color: white;
     font-size: 0.68rem; font-weight: 500; padding: 5px 12px; border-radius: 100px;
@@ -396,6 +443,10 @@
     .portfolio-cta { padding: 4rem 2rem; }
     footer { padding: 2rem; flex-direction: column; gap: 1rem; text-align: center; }
   }
+  @media (max-width: 520px) {
+    .roof-body { grid-template-columns: 1fr; }
+    .roof-plan svg { max-width: 180px; }
+  }
 </style>
 </head>
 <body>
@@ -412,7 +463,7 @@
   <div class="page-header-bg">Work</div>
   <p class="page-label">Selected work</p>
   <h1>Products built around<br><em>real use cases</em></h1>
-  <p>Two live products that show how we turn specific problems into clear, usable software people can understand and return to.</p>
+  <p>Three live products that show how we turn specific problems into clear, usable software people can understand and return to.</p>
 </div>
 <section class="portfolio">
   <div class="project-card">
@@ -550,6 +601,82 @@
             <div class="verb-option">runed</div>
             <div class="verb-option">running</div>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="project-card">
+    <div class="project-info">
+      <p class="project-num">03</p>
+      <div class="project-tags">
+        <span class="tag">Web App</span>
+        <span class="tag">iPhone App</span>
+        <span class="tag">Field Inspection</span>
+        <span class="tag mobile-soon">📱 iPhone app in App Store review</span>
+      </div>
+      <h2>RoofDossier</h2>
+      <p>A field-to-report workflow for roof inspectors. Inspectors capture each finding on their iPhone right on the roof — photos, a pin on the aerial map, and a voice memo — even without signal. Back at the desk, the web app transcribes the memos, suggests captions, sets repair urgency, and exports a polished PDF condition report for the client.</p>
+      <div class="project-meta">
+        <div class="meta-row">
+          <span class="meta-label">Problem solved</span>
+          <span class="meta-value">Turning on-site notes into a client report</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Audience</span>
+          <span class="meta-value">Roof inspectors and roofing professionals</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Platforms</span>
+          <span class="meta-value">Desktop web app + offline-first iPhone app</span>
+        </div>
+      </div>
+      <div class="project-actions">
+        <a href="https://roofdossier.com/" target="_blank" class="btn-visit">Visit app
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.5 9.5l7-7M4 2.5h5.5V8"/></svg>
+        </a>
+        <span class="btn-mobile">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M14.5 2.5c0 1.5-1 3-2.5 3.2C11.8 4.2 13 2.5 14.5 2.5z"/><path d="M18.5 8.8c-0.8-1-2-1.6-3.2-1.6-1.2 0-1.9 0.6-2.8 0.6-0.9 0-1.8-0.6-3-0.6-2.2 0-4.5 1.8-4.5 5.4 0 2.1 0.8 4.4 1.9 5.9 0.9 1.2 1.7 2.2 2.9 2.2 1.1 0 1.6-0.7 3-0.7 1.4 0 1.8 0.7 3 0.7 1.2 0 2.1-1.1 2.9-2.3 0.6-0.9 1-1.9 1.2-2.4-2.8-1.1-3.3-5.1-0.4-6.6-0.8-0.7-1.5-1.1-3-0.6z"/></svg>
+          App Store review pending
+        </span>
+      </div>
+    </div>
+    <div class="project-visual">
+      <div class="mobile-badge">Live now</div>
+      <div class="browser-frame">
+        <div class="browser-bar">
+          <div class="browser-dots"><span></span><span></span><span></span></div>
+          <div class="browser-url">roofdossier.com</div>
+        </div>
+        <div class="browser-content roof-visual">
+          <div class="roof-header">
+            <div class="roof-logo">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="white" stroke-width="1.4" stroke-linejoin="round">
+                <path d="M1.5 8L8 2.5 14.5 8"/>
+                <path d="M3.5 6.5V13.5h9V6.5"/>
+              </svg>
+            </div>
+            <div>
+              <div class="roof-title">RoofDossier</div>
+              <div class="roof-subtitle">Condition report — 14 Harbor St.</div>
+            </div>
+          </div>
+          <div class="roof-body">
+            <div class="roof-plan">
+              <svg width="100%" viewBox="0 0 120 100" fill="none">
+                <path d="M10 15h70v25h30v50H10z" stroke="rgba(255,255,255,0.35)" stroke-width="1.2"/>
+                <path d="M10 15l35 25 35-25M45 40v50" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+                <circle cx="28" cy="30" r="6" fill="#dc2626"/><text x="28" y="33" text-anchor="middle" font-size="8" fill="white" font-family="DM Sans, sans-serif">1</text>
+                <circle cx="90" cy="60" r="6" fill="#d97706"/><text x="90" y="63" text-anchor="middle" font-size="8" fill="white" font-family="DM Sans, sans-serif">2</text>
+                <circle cx="30" cy="75" r="6" fill="#16a34a"/><text x="30" y="78" text-anchor="middle" font-size="8" fill="white" font-family="DM Sans, sans-serif">3</text>
+              </svg>
+            </div>
+            <div class="roof-findings">
+              <div class="roof-finding"><span class="finding-num urgent">1</span><span class="finding-text">Cracked flashing at chimney<small>Urgent · 3 photos</small></span></div>
+              <div class="roof-finding"><span class="finding-num soon">2</span><span class="finding-text">Pooling water near drain<small>Within 6 months · 2 photos</small></span></div>
+              <div class="roof-finding"><span class="finding-num monitor">3</span><span class="finding-text">Minor granule loss<small>Monitor · 1 photo</small></span></div>
+            </div>
+          </div>
+          <div class="roof-export">📄 Export PDF report</div>
         </div>
       </div>
     </div>
